@@ -1,22 +1,62 @@
-.App {
-  text-align: center;
+.container {
+  padding: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.box {
+  background-color: green;
+  margin: 0px 20px;
+  position: relative;
+}
+
+.box button {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0 5px;
+}
+
+.top-bet {
+  background: #3273dc;
+  position: absolute;
+  top: -12%;
+  left: 24%;
+  height: 40px;
+  width: 75px;
+  border-radius: 5px;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 0 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.container.has-text-danger {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.selected .box {
+  transition: background-color 0.6s ease-in;
+  background: #ffcf99 !important;
+}
+
+.dummy-prg {
+  height: 35px;
+}
+
+.hero-body {
+  min-height: 620px;
+}
+
+.button.is-outlined {
+  font-size: 35px;
+  margin-top: -23px;
+  background: #3273dc;
+  color: #fff;
+}
+
+progress {
+  max-width: 600px;
 }
