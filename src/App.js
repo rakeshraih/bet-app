@@ -50,6 +50,15 @@ class App extends Component {
 
   render() {
     const begin = this.beginNo;
+    const { earned } = this.state;
+    let text = '';
+    if (earned <= -1000) {
+      text = 'You are dead mate, either quit or am coming for you!';
+    } else if (earned <= -500) {
+      text = 'you should quit & pay my debt!';
+    } else if (earned <= -200) {
+      text = 'You are taking a little risk here!';
+    }
 
     return (
       <div className="container">
@@ -118,17 +127,7 @@ class App extends Component {
           </button>
         </div>
 
-        {this.state.earned <= -200 && (
-          <div className="container has-text-danger is-size-5">You are taking a little risk here!</div>
-        )}
-        {this.state.earned <= -500 && (
-          <div className=" container has-text-danger is-size-5">you should quit & pay my debt!</div>
-        )}
-        {this.state.earned <= -1000 && (
-          <div className="container has-text-danger is-size-5">
-            You are dead mate, either quit or am coming for you!
-          </div>
-        )}
+        {text !== '' ? <div className="container has-text-danger is-size-5">{text}</div> : ''}
 
         <div className="row container">
           Money earned till now,{' '}
